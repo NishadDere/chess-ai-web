@@ -2,10 +2,19 @@
 <html>
 <head>
     <title>Chess AI</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.12.0/chess.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chessboardjs@1.0.0/dist/chessboard.min.js"></script>
+
+    <!-- ChessboardJS CSS -->
     <link href="https://cdn.jsdelivr.net/npm/chessboardjs@1.0.0/dist/chessboard.min.css" rel="stylesheet">
+
+    <!-- jQuery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+    <!-- Chess.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.12.0/chess.min.js"></script>
+
+    <!-- Chessboard.js (must come after jQuery) -->
+    <script src="https://cdn.jsdelivr.net/npm/chessboardjs@1.0.0/dist/chessboard.min.js"></script>
+
     <style>
         body { text-align: center; margin-top: 20px; }
         #board { width: 400px; margin: auto; }
@@ -15,6 +24,8 @@
     <h1>Chess AI: Minimax + Alpha-Beta</h1>
     <div id="board"></div>
     <br><button onclick="resetGame()">Reset</button>
+
+    <!-- Load your own script after libraries -->
     <script src="/static/script.js"></script>
 </body>
 </html>
