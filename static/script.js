@@ -26,9 +26,14 @@ $(function() {
     board = Chessboard('board', {
         draggable: true,
         position: 'start',
-        onDrop: function(source, target) {
-            makeMove(source, target);
-            return 'snapback';
-        }
+       onDrop: function(source, target) {
+    const move = game.move({ from: source, to: target, promotion: 'q' });
+    if (move === null) return 'snapback';  // Illegal move
+
+    game.undo(); // temporarily apply for validation, then revert
+
+    makeMove(source, target);
+}
+
     });
 });
